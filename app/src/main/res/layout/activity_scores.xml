@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ScoresActivity">
+
+    <TextView
+        android:id="@+id/highScores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/highScores"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+
+    <ListView
+        android:id="@+id/scoresList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:dividerHeight="6dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/dbCleanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/mainButtonColor"
+        android:text="@string/dbCleanButton"
+        android:textColor="@color/black"
+        app:cornerRadius="20dp"
+        tools:ignore="TextContrastCheck" />
+
+</LinearLayout>
