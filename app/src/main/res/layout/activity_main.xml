@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -14,7 +14,7 @@
         android:layout_marginTop="144dp"
         android:fontFamily="sans-serif"
         android:text="@string/homeTile"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

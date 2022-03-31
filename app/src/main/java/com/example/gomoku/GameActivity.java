@@ -133,7 +133,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null) {
@@ -361,11 +361,11 @@ public class GameActivity extends AppCompatActivity {
     }
 
     protected void setGameInfoToBlack() {
-        gameInfo.setTextColor(getResources().getColor(R.color.black));
+        gameInfo.setTextColor(getResources().getColor(R.color.blackPlayerTextColor));
     }
 
     protected void setGameInfoToWhite() {
-        gameInfo.setTextColor(getResources().getColor(R.color.white));
+        gameInfo.setTextColor(getResources().getColor(R.color.whitePlayerTextColor));
     }
 
     protected void activateButtons() {
