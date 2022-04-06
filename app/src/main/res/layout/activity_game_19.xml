@@ -28,8 +28,8 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_width="410dp"
+        android:layout_height="410dp"
         android:background="@drawable/board_grid_19"
         android:gravity="center"
         android:paddingStart="2dp"
@@ -50,171 +50,190 @@
 
             <ImageView
                 android:id="@+id/imageView0.0"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.1"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.2"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.3"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.4"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.5"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.6"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.7"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.8"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.9"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.10"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.11"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.12"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.13"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.14"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.15"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.16"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.17"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
             <ImageView
                 android:id="@+id/imageView0.18"
-                android:layout_width="18dp"
+                android:layout_width="20dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
+                android:cropToPadding="false"
                 android:focusable="auto"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
@@ -481,15 +500,6 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView2.18"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
                 android:id="@+id/imageView2.8"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
@@ -579,6 +589,15 @@
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/black" />
 
+            <ImageView
+                android:id="@+id/imageView2.18"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
         </TableRow>
 
         <TableRow
@@ -590,7 +609,7 @@
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
             <ImageView
-                android:id="@+id/imageView3.12"
+                android:id="@+id/imageView3.0"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -599,7 +618,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView3.14"
+                android:id="@+id/imageView3.1"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -617,16 +636,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView3.6"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView3.18"
+                android:id="@+id/imageView3.3"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -653,25 +663,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView3.8"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView3.11"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView3.1"
+                android:id="@+id/imageView3.6"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -689,25 +681,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView3.13"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView3.0"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView3.3"
+                android:id="@+id/imageView3.8"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -726,6 +700,42 @@
 
             <ImageView
                 android:id="@+id/imageView3.10"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView3.11"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView3.12"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView3.13"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView3.14"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -753,6 +763,15 @@
 
             <ImageView
                 android:id="@+id/imageView3.17"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView3.18"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -1845,6 +1864,60 @@
             android:focusable="auto">
 
             <ImageView
+                android:id="@+id/imageView10.0"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.1"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.2"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.3"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.4"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.5"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
                 android:id="@+id/imageView10.6"
                 android:layout_width="27dp"
                 android:layout_height="18dp"
@@ -1863,79 +1936,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView10.17"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.3"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.12"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.2"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.0"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.10"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.1"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.11"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.5"
+                android:id="@+id/imageView10.8"
                 android:layout_width="27dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -1953,7 +1954,25 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView10.16"
+                android:id="@+id/imageView10.10"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.11"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.12"
                 android:layout_width="27dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -1971,16 +1990,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView10.8"
-                android:layout_width="27dp"
-                android:layout_height="18dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView10.4"
+                android:id="@+id/imageView10.14"
                 android:layout_width="27dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -1998,7 +2008,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView10.18"
+                android:id="@+id/imageView10.16"
                 android:layout_width="27dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
@@ -2007,7 +2017,16 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView10.14"
+                android:id="@+id/imageView10.17"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.18"
                 android:layout_width="27dp"
                 android:layout_height="18dp"
                 android:layout_weight="1"
