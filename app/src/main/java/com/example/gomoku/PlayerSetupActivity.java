@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -31,7 +30,7 @@ public class PlayerSetupActivity extends AppCompatActivity {
                 playerWhiteName = "White";
 
 
-            Intent intent = new Intent(view.getContext(), GameActivity.class);
+            Intent intent = new Intent(view.getContext(), GameActivity15.class);
             intent.putExtra("playerBlackName", playerBlackName);
             intent.putExtra("playerWhiteName", playerWhiteName);
             startActivity(intent);

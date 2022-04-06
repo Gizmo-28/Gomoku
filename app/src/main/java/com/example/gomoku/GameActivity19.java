@@ -1,20 +1,19 @@
 package com.example.gomoku;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GameActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
+public class GameActivity19 extends AppCompatActivity {
 
     private final int[][] imageViewsIds = new int[][] {
             {
@@ -132,7 +131,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_game_19);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
 
         Bundle bundle = getIntent().getExtras();
@@ -205,7 +204,7 @@ public class GameActivity extends AppCompatActivity {
         exitButton = (Button) findViewById(R.id.exitButton);
 
         playAgainButton.setOnClickListener(view -> {
-            Intent intent = new Intent(view.getContext(), GameActivity.class);
+            Intent intent = new Intent(view.getContext(), GameActivity19.class);
             intent.putExtra("playerBlackName", playerBlackName);
             intent.putExtra("playerWhiteName", playerWhiteName);
             startActivity(intent);

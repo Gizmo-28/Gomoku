@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".GameActivity">
+    tools:context=".GameActivity15">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:gravity="center_horizontal|center_vertical"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/board_grid"
+        android:gravity="center"
         android:paddingStart="2dp"
         android:paddingEnd="3dp"
         android:paddingBottom="4dp"
@@ -167,6 +167,38 @@
                 android:layout_weight="1"
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView0.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView0.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView0.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView0.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
         </TableRow>
 
         <TableRow
@@ -296,6 +328,38 @@
                 android:layout_weight="1"
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView1.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView1.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView1.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView1.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
         </TableRow>
 
         <TableRow
@@ -420,6 +484,38 @@
 
             <ImageView
                 android:id="@+id/imageView2.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.18"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -556,6 +652,38 @@
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
 
+            <ImageView
+                android:id="@+id/imageView3.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView3.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView3.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView3.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
         </TableRow>
 
         <TableRow
@@ -679,6 +807,38 @@
 
             <ImageView
                 android:id="@+id/imageView4.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView4.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView4.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView4.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView4.18"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -812,6 +972,38 @@
                 android:layout_weight="1"
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView5.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView5.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView5.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView5.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
         </TableRow>
 
         <TableRow
@@ -940,6 +1132,38 @@
                 android:layout_weight="1"
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView6.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView6.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView6.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView6.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
         </TableRow>
 
         <TableRow
@@ -1063,6 +1287,38 @@
 
             <ImageView
                 android:id="@+id/imageView7.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView7.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView7.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView7.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView7.18"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -1197,6 +1453,38 @@
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
 
+            <ImageView
+                android:id="@+id/imageView8.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView8.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView8.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView8.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
         </TableRow>
 
         <TableRow
@@ -1320,6 +1608,38 @@
 
             <ImageView
                 android:id="@+id/imageView9.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView9.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView9.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView9.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView9.18"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -1453,6 +1773,38 @@
                 android:layout_weight="1"
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView10.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
         </TableRow>
 
         <TableRow
@@ -1576,6 +1928,38 @@
 
             <ImageView
                 android:id="@+id/imageView11.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView11.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView11.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView11.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView11.18"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -1709,6 +2093,38 @@
                 android:layout_weight="1"
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView12.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView12.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView12.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView12.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
         </TableRow>
 
         <TableRow
@@ -1837,6 +2253,38 @@
                 android:layout_weight="1"
                 android:focusable="auto"
                 app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView13.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView13.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView13.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView13.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
         </TableRow>
 
         <TableRow
@@ -1960,6 +2408,678 @@
 
             <ImageView
                 android:id="@+id/imageView14.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView14.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView14.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView14.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView14.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:focusable="auto">
+
+            <ImageView
+                android:id="@+id/imageView15.0"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.1"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.2"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.3"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.4"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.5"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.6"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.7"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.8"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.9"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.10"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.11"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.12"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.13"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView15.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:focusable="auto">
+
+            <ImageView
+                android:id="@+id/imageView16.0"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.1"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.2"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.3"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.4"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.5"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.6"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.7"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.8"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.9"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.10"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.11"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.12"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.13"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView16.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:focusable="auto">
+
+            <ImageView
+                android:id="@+id/imageView17.0"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.1"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.2"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.3"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.4"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.5"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.6"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.7"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.8"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.9"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.10"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.11"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.12"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.13"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView17.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:focusable="auto">
+
+            <ImageView
+                android:id="@+id/imageView18.0"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.1"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.2"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.3"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.4"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.5"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.6"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.7"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.8"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.9"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.10"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.11"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.12"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.13"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.14"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.15"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView18.18"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
