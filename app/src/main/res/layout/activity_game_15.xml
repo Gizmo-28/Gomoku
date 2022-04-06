@@ -307,31 +307,7 @@
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
             <ImageView
-                android:id="@+id/imageView2.0"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView2.1"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView2.2"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView2.3"
+                android:id="@+id/imageView2.18"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -347,7 +323,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView2.5"
+                android:id="@+id/imageView2.17"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -355,31 +331,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView2.6"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView2.7"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView2.8"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_weight="1"
-                android:focusable="auto"
-                app:srcCompat="@drawable/black" />
-
-            <ImageView
-                android:id="@+id/imageView2.9"
+                android:id="@+id/imageView2.16"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -395,7 +347,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView2.11"
+                android:id="@+id/imageView2.4"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -403,7 +355,7 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView2.12"
+                android:id="@+id/imageView2.15"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
@@ -419,7 +371,55 @@
                 app:srcCompat="@drawable/black" />
 
             <ImageView
-                android:id="@+id/imageView2.14"
+                android:id="@+id/imageView2.17"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.12"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.9"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.16"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.18"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.7"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                app:srcCompat="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/imageView2.18"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_weight="1"
