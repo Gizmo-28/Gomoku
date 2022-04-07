@@ -21,7 +21,7 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="410dp"
         android:background="@drawable/board_grid_19"
         android:gravity="center"
