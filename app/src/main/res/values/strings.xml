@@ -12,6 +12,7 @@
     <string name="scoresButton">Scores</string>
     <string name="highScores">High scores</string>
     <string name="dbCleanButton">Clean Scores</string>
-
+    <string name="button15">15x15</string>
+    <string name="button19">19x19</string>
 
 </resources>

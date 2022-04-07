@@ -18,6 +18,10 @@
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".GameActivity19"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".PlayerSetupActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>

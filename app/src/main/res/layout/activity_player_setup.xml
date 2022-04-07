@@ -94,6 +94,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerWhiteName"
-        app:layout_constraintVertical_bias="0.356"
+        app:layout_constraintVertical_bias="0.492"
         tools:ignore="TextContrastCheck" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/button15"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerWhiteName">
+
+        <RadioButton
+            android:id="@+id/button15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/button15" />
+
+        <RadioButton
+            android:id="@+id/button19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/button19" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
