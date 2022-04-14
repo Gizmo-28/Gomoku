@@ -33,18 +33,24 @@ public class PlayerSetupActivity extends AppCompatActivity {
             if(playerWhiteName.length() == 0)
                 playerWhiteName = "White";
 
-            Intent intent15 = new Intent(view.getContext(), GameActivity15.class);
-            Intent intent19 = new Intent(view.getContext(), GameActivity19.class);
+//            Intent intent15 = new Intent(view.getContext(), GameActivity15.class);
+//            Intent intent19 = new Intent(view.getContext(), GameActivity19.class);
+//
+//            if(isBoardSize15) {
+//                intent15.putExtra("playerBlackName", playerBlackName);
+//                intent15.putExtra("playerWhiteName", playerWhiteName);
+//                startActivity(intent15);
+//            } else {
+//                intent19.putExtra("playerBlackName", playerBlackName);
+//                intent19.putExtra("playerWhiteName", playerWhiteName);
+//                startActivity(intent19);
+//            }
 
-            if(isBoardSize15) {
-                intent15.putExtra("playerBlackName", playerBlackName);
-                intent15.putExtra("playerWhiteName", playerWhiteName);
-                startActivity(intent15);
-            } else {
-                intent19.putExtra("playerBlackName", playerBlackName);
-                intent19.putExtra("playerWhiteName", playerWhiteName);
-                startActivity(intent19);
-            }
+            Intent intent = new Intent(view.getContext(), GameActivity.class);
+            intent.putExtra("playerBlackName", playerBlackName);
+            intent.putExtra("playerWhiteName", playerWhiteName);
+            intent.putExtra("isBoardSize15", isBoardSize15);
+            startActivity(intent);
         });
 
     }

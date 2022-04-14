@@ -10,17 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gomoku">
         <activity
-            android:name=".ScoresActivity"
+            android:name=".GameActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".GameActivity15"
+            android:name=".ScoresActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".GameActivity19"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".PlayerSetupActivity"
             android:exported="false"
