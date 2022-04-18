@@ -12,6 +12,7 @@ import android.widget.EditText;
 public class PlayerSetupActivity extends AppCompatActivity {
 
     boolean isBoardSize15 = true;
+    boolean timeWithBonus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class PlayerSetupActivity extends AppCompatActivity {
             intent.putExtra("playerBlackName", playerBlackName);
             intent.putExtra("playerWhiteName", playerWhiteName);
             intent.putExtra("isBoardSize15", isBoardSize15);
+            intent.putExtra("timeWithBonus", timeWithBonus);
             startActivity(intent);
         });
 
@@ -59,5 +61,9 @@ public class PlayerSetupActivity extends AppCompatActivity {
             isBoardSize15 = true;
         else
             isBoardSize15 = false;
+    }
+
+    public void onTimeOptionClicked(View view) {
+        timeWithBonus = view.getId() == R.id.buttonTimeWithBonus;
     }
 }
