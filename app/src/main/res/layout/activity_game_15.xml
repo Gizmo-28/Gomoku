@@ -29,6 +29,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="bottom"
             android:orientation="horizontal">
 
             <TextView
@@ -36,7 +37,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="05:43"
                 android:textAlignment="center"
                 android:textColor="@color/whitePlayerTextColor" />
 
@@ -45,7 +45,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="00:23"
                 android:textAlignment="center"
                 android:textColor="@color/blackPlayerTextColor" />
         </LinearLayout>

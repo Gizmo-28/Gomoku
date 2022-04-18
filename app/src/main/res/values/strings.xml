@@ -14,7 +14,7 @@
     <string name="dbCleanButton">Clean Scores</string>
     <string name="button15">15x15</string>
     <string name="button19">19x19</string>
-    <string name="buttonStandardTime">15min</string>
-    <string name="buttonTimeWithBonus">10min|10s</string>
+    <string name="buttonStandardTime">1min</string>
+    <string name="buttonTimeWithBonus">1min|5s</string>
 
 </resources>

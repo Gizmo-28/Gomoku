@@ -24,9 +24,9 @@ public class GameActivity extends AppCompatActivity {
     private ImageView[][] imageViewsArray;
     private int[][] gameGrid;
 
-    private final int STANDARD_TIME = 15;
-    private final int TIME_WITH_BONUS = 10;
-    private final int BONUS_TIME = 10;
+    private final int STANDARD_TIME = 1 * 60 * 1000;
+    private final int TIME_WITH_BONUS = 1 * 60 * 1000;
+    private final int BONUS_TIME = 5 * 1000;
 
     private boolean withBonus = false;
     private CountDownTimer whiteTimer;
@@ -35,8 +35,14 @@ public class GameActivity extends AppCompatActivity {
     private TextView whiteTimerLabel;
     private TextView blackTimerLabel;
 
-    private boolean firstWhiteMoveDone = false;
-    private boolean firstBlackMoveDone = false;
+    private boolean whiteTimerActive = false;
+    private boolean blackTimerActive = false;
+
+    private long lastWhiteTimerValue = 0;
+    private long lastBlackTimerValue = 0;
+
+    private long startWhiteTimerValue = 0;
+    private long startBlackTimerValue = 0;
 
     private String playerBlackName;
     private String playerWhiteName;
@@ -69,12 +75,18 @@ public class GameActivity extends AppCompatActivity {
             }
 
             if (bundle.getBoolean("timeWithBonus")) {
-                initlializeTimer(true,TIME_WITH_BONUS * 60 * 1000);
-                initlializeTimer(false,TIME_WITH_BONUS * 60 * 1000);
+                initlializeTimers(TIME_WITH_BONUS);
+                lastWhiteTimerValue = TIME_WITH_BONUS;
+                lastBlackTimerValue = TIME_WITH_BONUS;
+                startWhiteTimerValue = TIME_WITH_BONUS;
+                startBlackTimerValue = TIME_WITH_BONUS;
                 withBonus = true;
             } else {
-                initlializeTimer(true, STANDARD_TIME * 60 * 1000);
-                initlializeTimer(false, STANDARD_TIME * 60 * 1000);
+                initlializeTimers(STANDARD_TIME);
+                lastWhiteTimerValue = STANDARD_TIME;
+                lastBlackTimerValue = STANDARD_TIME;
+                startWhiteTimerValue = STANDARD_TIME;
+                startBlackTimerValue = STANDARD_TIME;
                 withBonus = false;
             }
 
@@ -86,6 +98,11 @@ public class GameActivity extends AppCompatActivity {
 
         whiteTimerLabel = (TextView) findViewById(R.id.whiteTimer);
         blackTimerLabel = (TextView) findViewById(R.id.blackTimer);
+
+        if(withBonus) {
+            startBlackTimerValue += BONUS_TIME;
+            startWhiteTimerValue += BONUS_TIME;
+        }
 
         gameInfo = (TextView) findViewById(R.id.gameInfo);
         setGameInfoToName(playerBlackName);
@@ -104,10 +121,19 @@ public class GameActivity extends AppCompatActivity {
                     if(view.getAlpha() != 1)
                     {
                         if(isBlackTurn) {
-                            if (!firstBlackMoveDone) {
-                                blackTimer.start();
-                                firstBlackMoveDone = true;
+                            if (withBonus) {
+                                long responseTime = startBlackTimerValue - lastBlackTimerValue;
+                                if (responseTime <= BONUS_TIME) {
+                                    lastBlackTimerValue += BONUS_TIME - responseTime;
+                                    updateTimer(blackTimer, lastBlackTimerValue);
+                                }
                             }
+                            blackTimerActive = false;
+                            blackTimer.cancel();
+                            initlializeBlackTimer(lastBlackTimerValue);
+                            whiteTimerActive = true;
+                            startWhiteTimerValue = lastWhiteTimerValue;
+                            whiteTimer.start();
                             view.setAlpha(1.0F);
                             counterBlackTurns++;
                             isBlackTurn = false;
@@ -116,6 +142,8 @@ public class GameActivity extends AppCompatActivity {
                             gameGrid[row][column] = BLACK;
 //                            Log.d("position", row+ " ," + column);
                             if(checkWinningPosition(BLACK)) {
+                                whiteTimer.cancel();
+                                blackTimer.cancel();
                                 winner = BLACK;
                                 setImageViewsArrayNonClickable();
                                 colorWinningStones();
@@ -126,10 +154,19 @@ public class GameActivity extends AppCompatActivity {
                             }
                         }
                         else {
-                            if (!firstWhiteMoveDone) {
-                                whiteTimer.start();
-                                firstWhiteMoveDone = true;
+                            if (withBonus) {
+                                long responseTime = startWhiteTimerValue - lastWhiteTimerValue;
+                                if (responseTime <= BONUS_TIME) {
+                                    lastWhiteTimerValue += BONUS_TIME - responseTime;
+                                    updateTimer(whiteTimer, lastWhiteTimerValue);
+                                }
                             }
+                            whiteTimerActive = false;
+                            whiteTimer.cancel();
+                            initlializeWhiteTimer(lastWhiteTimerValue);
+                            blackTimerActive = true;
+                            startBlackTimerValue = lastBlackTimerValue;
+                            blackTimer.start();
                             if(bundle.getBoolean("isBoardSize15"))
                                 currentImage.setImageResource(R.drawable.white_inverted);
                             else
@@ -142,6 +179,8 @@ public class GameActivity extends AppCompatActivity {
                             gameGrid[row][column] = WHITE;
 //                            Log.d("position", row+ "," + column);
                             if(checkWinningPosition(WHITE)) {
+                                whiteTimer.cancel();
+                                blackTimer.cancel();
                                 winner = WHITE;
                                 setImageViewsArrayNonClickable();
                                 colorWinningStones();
@@ -350,10 +389,27 @@ public class GameActivity extends AppCompatActivity {
         statement.executeInsert();
     }
 
-    protected void initlializeTimer(boolean white, long millis) {
-        CountDownTimer timer = white ? whiteTimer : blackTimer;
+    protected void initlializeTimers(long millis) {
+        initlializeWhiteTimer(millis);
+        initlializeBlackTimer(millis);
+    }
 
-        timer = new CountDownTimer(millis, 1000) {
+    protected void initlializeWhiteTimer(long millis) {
+        whiteTimer = new CountDownTimer(millis, 1000) {
+            @Override
+            public void onTick(long l) {
+                updateTimer(this ,l);
+            }
+
+            @Override
+            public void onFinish() {
+                timeOut(this);
+            }
+        };
+    }
+
+    protected void initlializeBlackTimer(long millis) {
+        blackTimer = new CountDownTimer(millis, 1000) {
             @Override
             public void onTick(long l) {
                 updateTimer(this ,l);
@@ -368,36 +424,40 @@ public class GameActivity extends AppCompatActivity {
 
     protected void updateTimer(CountDownTimer timer, long millis) {
         if (timer == whiteTimer) {
+            lastWhiteTimerValue = millis;
             whiteTimerLabel.setText(getTimerLabel(millis));
         } else {
+            lastBlackTimerValue = millis;
             blackTimerLabel.setText((getTimerLabel(millis)));
         }
     }
 
     protected String getTimerLabel(long millis) {
-        String minuntes = String.format("%" + 2 + "s", (int)millis/1000/60);
-        String seconds = String.format("%" + 2 + "s", (int)millis/1000 - ((int)millis/1000/60)*60);
+        String minuntes = String.format("%" + 2 + "s", (int)millis/1000/60).replace(" ", "0");
+        String seconds = String.format("%" + 2 + "s", (int)millis/1000 - ((int)millis/1000/60)*60).replace(" ", "0");
 
         return minuntes + ":" + seconds;
     }
 
     protected void timeOut(CountDownTimer timer) {
         if (timer == whiteTimer) {
-            winner = BLACK;
-            setImageViewsArrayNonClickable();
-            colorWinningStones();
-            setGameInfoToWon(playerBlackName);
-            setGameInfoToBlack();
-            activateButtons();
-            addScoresToDb(playerBlackName, playerWhiteName, counterBlackTurns);
+            if (whiteTimerActive) {
+                winner = BLACK;
+                setImageViewsArrayNonClickable();
+                setGameInfoToWon(playerBlackName);
+                setGameInfoToBlack();
+                activateButtons();
+                addScoresToDb(playerBlackName, playerWhiteName, counterBlackTurns);
+            }
         } else {
-            winner = WHITE;
-            setImageViewsArrayNonClickable();
-            colorWinningStones();
-            setGameInfoToWon(playerWhiteName);
-            setGameInfoToWhite();
-            activateButtons();
-            addScoresToDb(playerWhiteName, playerBlackName, counterWhiteTurns);
+            if(blackTimerActive) {
+                winner = WHITE;
+                setImageViewsArrayNonClickable();
+                setGameInfoToWon(playerWhiteName);
+                setGameInfoToWhite();
+                activateButtons();
+                addScoresToDb(playerWhiteName, playerBlackName, counterWhiteTurns);
+            }
         }
     }
 }
