@@ -152,7 +152,7 @@ public class GameActivity extends AppCompatActivity {
                                 setGameInfoToWon(playerBlackName);
                                 setGameInfoToBlack();
                                 activateButtons();
-                                addScoresToDb(playerBlackName, playerWhiteName, counterBlackTurns);
+                                addScoresToDbIfWon(playerBlackName, playerWhiteName, counterBlackTurns);
                             }
                         }
                         else {
@@ -189,7 +189,7 @@ public class GameActivity extends AppCompatActivity {
                                 setGameInfoToWon(playerWhiteName);
                                 setGameInfoToWhite();
                                 activateButtons();
-                                addScoresToDb(playerWhiteName, playerBlackName, counterWhiteTurns);
+                                addScoresToDbIfWon(playerWhiteName, playerBlackName, counterWhiteTurns);
                             }
                         }
                     }
@@ -224,9 +224,8 @@ public class GameActivity extends AppCompatActivity {
                     setImageViewsArrayNonClickable();
                     setGameInfoToDraw();
                     activateButtons();
-                    // co z bazą danych?
-
-
+                    int movesNum = counterBlackTurns > counterWhiteTurns ? counterBlackTurns : counterWhiteTurns;
+                    addScoresToDbIfDrawn(playerWhiteName, playerBlackName, movesNum);
                     dialog.dismiss();
                 }
             });
@@ -411,7 +410,7 @@ public class GameActivity extends AppCompatActivity {
         exitButton.setVisibility(View.VISIBLE);
     }
 
-    protected void addScoresToDb(String winner, String looser, int counterTurns) {
+    protected void addScoresToDbIfWon(String winner, String looser, int counterTurns) {
         SQLiteDatabase db;
         db = openOrCreateDatabase("gomoku", MODE_PRIVATE, null);
         String query = "CREATE TABLE IF NOT EXISTS scores(" +
@@ -424,6 +423,24 @@ public class GameActivity extends AppCompatActivity {
         query = "INSERT INTO scores VALUES (NULL, ?, ?, ?)";
         SQLiteStatement statement = db.compileStatement(query);
         statement.bindString(1, winner);
+        statement.bindString(2, looser);
+        statement.bindLong(3, counterTurns);
+        statement.executeInsert();
+    }
+
+    protected void addScoresToDbIfDrawn(String winner, String looser, int counterTurns) {
+        SQLiteDatabase db;
+        db = openOrCreateDatabase("gomoku", MODE_PRIVATE, null);
+        String query = "CREATE TABLE IF NOT EXISTS scores(" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "winner VARCHAR," +
+                "looser VARCHAR," +
+                "movesToWin INTEGER)";
+        db.execSQL(query);
+
+        query = "INSERT INTO scores VALUES (NULL, ?, ?, ?)";
+        SQLiteStatement statement = db.compileStatement(query);
+        statement.bindString(1, winner + " draw");
         statement.bindString(2, looser);
         statement.bindLong(3, counterTurns);
         statement.executeInsert();
@@ -487,7 +504,7 @@ public class GameActivity extends AppCompatActivity {
                 setGameInfoToWon(playerBlackName);
                 setGameInfoToBlack();
                 activateButtons();
-                addScoresToDb(playerBlackName, playerWhiteName, counterBlackTurns);
+                addScoresToDbIfWon(playerBlackName, playerWhiteName, counterBlackTurns);
             }
         } else {
             if(blackTimerActive) {
@@ -496,7 +513,7 @@ public class GameActivity extends AppCompatActivity {
                 setGameInfoToWon(playerWhiteName);
                 setGameInfoToWhite();
                 activateButtons();
-                addScoresToDb(playerWhiteName, playerBlackName, counterWhiteTurns);
+                addScoresToDbIfWon(playerWhiteName, playerBlackName, counterWhiteTurns);
             }
         }
     }

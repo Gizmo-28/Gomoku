@@ -56,7 +56,11 @@ public class ScoresActivity extends AppCompatActivity {
                 @SuppressLint("Range") String winner = cursor.getString(cursor.getColumnIndex("winner"));
                 @SuppressLint("Range") String looser = cursor.getString(cursor.getColumnIndex("looser"));
                 @SuppressLint("Range") int movesToWin = cursor.getInt(cursor.getColumnIndex("movesToWin"));
-                tempScores.add("Winner: " + winner + "\nLooser: " + looser + "\nwin in: " + movesToWin + " moves");
+                if(winner.contains("draw"))
+                    tempScores.add("Player 1: " + winner.replace(" draw", "") +
+                            "\nPlayer 2: " + looser + "\ndraw after: " + movesToWin + " moves");
+                else
+                    tempScores.add("Winner: " + winner + "\nLooser: " + looser + "\nwin in: " + movesToWin + " moves");
             } while (cursor.moveToNext());
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
