@@ -3,6 +3,8 @@ package com.example.gomoku;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
@@ -209,8 +211,37 @@ public class GameActivity extends AppCompatActivity {
         });
 
         scoresButton.setOnClickListener(view -> {
-            Intent intent = new Intent(view.getContext(), ScoresActivity.class);
-            startActivity(intent);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            builder.setTitle("Draw offered");
+            builder.setMessage("Do you accept draw?");
+
+            builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+                public void onClick(DialogInterface dialog, int which) {
+                    whiteTimer.cancel();
+                    blackTimer.cancel();
+                    setImageViewsArrayNonClickable();
+                    setGameInfoToDraw();
+                    activateButtons();
+                    // co z bazą danych?
+
+
+                    dialog.dismiss();
+                }
+            });
+
+            builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(getApplicationContext(), "Draw declined!", Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                }
+            });
+
+            AlertDialog alert = builder.create();
+            alert.show();
         });
 
         exitButton.setOnClickListener(view -> {
@@ -357,6 +388,11 @@ public class GameActivity extends AppCompatActivity {
         gameInfo.setText(msg);
     }
 
+    protected void setGameInfoToDraw() {
+        String msg = "Game drawn!";
+        gameInfo.setText(msg);
+    }
+
     protected void setGameInfoToBlack() {
         gameInfo.setTextColor(getResources().getColor(R.color.blackPlayerTextColor));
     }
@@ -367,7 +403,11 @@ public class GameActivity extends AppCompatActivity {
 
     protected void activateButtons() {
         playAgainButton.setVisibility(View.VISIBLE);
-        scoresButton.setVisibility(View.VISIBLE);
+        scoresButton.setText("SCORES");
+        scoresButton.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), ScoresActivity.class);
+            startActivity(intent);
+        });
         exitButton.setVisibility(View.VISIBLE);
     }
 

@@ -2023,9 +2023,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/mainButtonColor"
-            android:text="@string/scoresButton"
+            android:text="@string/drawButton"
             android:textColor="@color/black"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:cornerRadius="20dp"
             tools:ignore="TextContrastCheck" />
 

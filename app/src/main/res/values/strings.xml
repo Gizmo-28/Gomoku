@@ -10,6 +10,7 @@
     <string name="playAgainButton">Play Again</string>
     <string name="exitButton">Exit</string>
     <string name="scoresButton">Scores</string>
+    <string name="drawButton">Draw</string>
     <string name="highScores">High scores</string>
     <string name="dbCleanButton">Clean Scores</string>
     <string name="button15">15x15</string>
