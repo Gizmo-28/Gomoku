@@ -34,23 +34,22 @@
 
             <TextView
                 android:id="@+id/whiteTimer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textColor="@color/whitePlayerTextColor" />
 
             <TextView
                 android:id="@+id/blackTimer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textColor="@color/blackPlayerTextColor" />
         </LinearLayout>
 
     </LinearLayout>
-
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -3541,9 +3540,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/mainButtonColor"
-            android:text="@string/scoresButton"
+            android:text="@string/drawButton"
             android:textColor="@color/black"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:cornerRadius="20dp"
             tools:ignore="TextContrastCheck" />
 
