@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gomoku">
         <activity
+            android:name=".TopPlayersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".AnalyzeActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>

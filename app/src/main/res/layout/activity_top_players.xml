@@ -15,13 +15,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/highScores"
+        android:text="@string/topPlayers"
         android:textColor="@color/textColor"
         android:textSize="30sp" />
 
 
     <ListView
-        android:id="@+id/scoresList"
+        android:id="@+id/playersList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -30,28 +30,5 @@
         tools:layout_editor_absoluteY="1dp">
 
     </ListView>
-
-    <Button
-        android:id="@+id/dbCleanButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"
-        android:backgroundTint="@color/mainButtonColor"
-        android:text="@string/dbCleanButton"
-        android:textColor="@color/black"
-        app:cornerRadius="20dp"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/topPlayersButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:backgroundTint="@color/mainButtonColor"
-        android:text="@string/topPlayers"
-        android:textColor="@color/black"
-        app:cornerRadius="20dp"
-        tools:ignore="TextContrastCheck" />
 
 </LinearLayout>

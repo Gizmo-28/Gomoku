@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,6 +18,7 @@ public class ScoresActivity extends AppCompatActivity {
     SQLiteDatabase db;
     ListView scoresList;
     Button dbCleanButton;
+    Button topPlayersButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,12 @@ public class ScoresActivity extends AppCompatActivity {
             String query = "DELETE FROM scores";
             db.execSQL(query);
             dbSelectAll();
+        });
+
+        topPlayersButton = (Button) findViewById(R.id.topPlayersButton);
+        topPlayersButton.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), TopPlayersActivity.class);
+            startActivity(intent);
         });
 
         scoresList = (ListView) findViewById(R.id.scoresList);
@@ -58,7 +65,7 @@ public class ScoresActivity extends AppCompatActivity {
                 @SuppressLint("Range") int movesToWin = cursor.getInt(cursor.getColumnIndex("movesToWin"));
                 if(winner.contains("draw"))
                     tempScores.add("Player 1: " + winner.replace(" draw", "") +
-                            "\nPlayer 2: " + looser + "\ndraw after: " + movesToWin + " moves");
+                            "\nPlayer 2: " + looser.replace(" draw", "") + "\ndraw after: " + movesToWin + " moves");
                 else
                     tempScores.add("Winner: " + winner + "\nLooser: " + looser + "\nwin in: " + movesToWin + " moves");
             } while (cursor.moveToNext());

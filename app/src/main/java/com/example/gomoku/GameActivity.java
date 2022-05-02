@@ -253,6 +253,8 @@ public class GameActivity extends AppCompatActivity {
             alert.show();
         });
 
+        // przy cofnięciu ostatniego ruchu nie bieże pod uwagę czasu który upłynął podczas
+        // wyświetlania okienka z zapytaniem o cofnięcie ruchu !!!
         playAgainButton.setOnClickListener(view -> {
             if(!wasMoveReversed) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -527,7 +529,7 @@ public class GameActivity extends AppCompatActivity {
         query = "INSERT INTO scores VALUES (NULL, ?, ?, ?)";
         SQLiteStatement statement = db.compileStatement(query);
         statement.bindString(1, winner + " draw");
-        statement.bindString(2, looser);
+        statement.bindString(2, looser + " draw");
         statement.bindLong(3, counterTurns);
         statement.executeInsert();
     }
