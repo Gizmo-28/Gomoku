@@ -57,16 +57,19 @@ public class GameActivity extends AppCompatActivity {
     private int counterBlackTurns = 0;
     private int counterWhiteTurns = 0;
     private boolean isBlackTurn = true;
+    private boolean wasMoveReversed = false;
     final private int BLACK = 0;
     final private int WHITE = 1;
     final private int EMPTY = 2;
     private int winner = EMPTY;
     final private int numberToWin = 5;
     private MyPair[] winningStones = new MyPair[numberToWin];
+    private MyPair lastMove;
     private Button playAgainButton;
     private Button scoresButton;
     private Button exitButton;
     private Button analyzeButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,6 +153,9 @@ public class GameActivity extends AppCompatActivity {
                             gameInfoManipulator.setGameInfoToWhite();
                             gameGrid[row][column] = BLACK;
                             stonesInOrderList.add(new MyPair(row, column));
+                            lastMove = new MyPair(row, column);
+                            wasMoveReversed = false;
+
 //                            Log.d("position", row+ " ," + column);
                             if(checkWinningPosition(BLACK)) {
                                 whiteTimer.cancel();
@@ -188,6 +194,8 @@ public class GameActivity extends AppCompatActivity {
                             gameInfoManipulator.setGameInfoToBlack();
                             gameGrid[row][column] = WHITE;
                             stonesInOrderList.add(new MyPair(row, column));
+                            lastMove = new MyPair(row, column);
+                            wasMoveReversed = false;
 //                            Log.d("position", row+ "," + column);
                             if(checkWinningPosition(WHITE)) {
                                 whiteTimer.cancel();
@@ -211,14 +219,6 @@ public class GameActivity extends AppCompatActivity {
         scoresButton = (Button) findViewById(R.id.scoresButton);
         exitButton = (Button) findViewById(R.id.exitButton);
         analyzeButton = (Button) findViewById(R.id.analyzeButton);
-
-        playAgainButton.setOnClickListener(view -> {
-            Intent intent = new Intent(view.getContext(), GameActivity.class);
-            intent.putExtra("playerBlackName", playerBlackName);
-            intent.putExtra("playerWhiteName", playerWhiteName);
-            intent.putExtra("isBoardSize15", imageViewsArray.length == 15);
-            startActivity(intent);
-        });
 
         scoresButton.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -252,6 +252,87 @@ public class GameActivity extends AppCompatActivity {
             AlertDialog alert = builder.create();
             alert.show();
         });
+
+        playAgainButton.setOnClickListener(view -> {
+            if(!wasMoveReversed) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                builder.setTitle("Reverse request");
+                builder.setMessage("Do you accept reverse of your opponent's last movement?");
+
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        int row = lastMove.getRow();
+                        int column = lastMove.getColumn();
+                        wasMoveReversed = true;
+
+                        gameGrid[row][column] = EMPTY;
+
+                        if (bundle.getBoolean("isBoardSize15"))
+                            imageViewsArray[row][column].setImageResource(R.drawable.black);
+                        else
+                            imageViewsArray[row][column].setImageResource(R.drawable.black_trim);
+                        imageViewsArray[row][column].setAlpha(0.0F);
+
+                        stonesInOrderList.remove(stonesInOrderList.size() - 1);
+
+                        isBlackTurn = !isBlackTurn;
+
+                        if(!isBlackTurn) {
+                            gameInfoManipulator.setGameInfoToName(playerBlackName);
+                            gameInfoManipulator.setGameInfoToBlack();
+                            if (withBonus) {
+                                long responseTime = startBlackTimerValue - lastBlackTimerValue;
+                                if (responseTime <= BONUS_TIME) {
+                                    lastBlackTimerValue += BONUS_TIME - responseTime;
+                                    updateTimer(blackTimer, lastBlackTimerValue);
+                                }
+                            }
+                            blackTimerActive = false;
+                            blackTimer.cancel();
+                            initlializeBlackTimer(lastBlackTimerValue);
+                            whiteTimerActive = true;
+                            startWhiteTimerValue = lastWhiteTimerValue;
+                            whiteTimer.start();
+                        }
+                        else {
+                            gameInfoManipulator.setGameInfoToName(playerWhiteName);
+                            gameInfoManipulator.setGameInfoToWhite();
+                            if (withBonus) {
+                                long responseTime = startWhiteTimerValue - lastWhiteTimerValue;
+                                if (responseTime <= BONUS_TIME) {
+                                    lastWhiteTimerValue += BONUS_TIME - responseTime;
+                                    updateTimer(whiteTimer, lastWhiteTimerValue);
+                                }
+                            }
+                            whiteTimerActive = false;
+                            whiteTimer.cancel();
+                            initlializeWhiteTimer(lastWhiteTimerValue);
+                            blackTimerActive = true;
+                            startBlackTimerValue = lastBlackTimerValue;
+                            blackTimer.start();
+                        }
+
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "Request declined!", Toast.LENGTH_LONG).show();
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+            }else
+                Toast.makeText(getApplicationContext(), "Move already reversed!", Toast.LENGTH_LONG).show();
+            }
+        );
 
         exitButton.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), MainActivity.class);
@@ -399,7 +480,14 @@ public class GameActivity extends AppCompatActivity {
     }
 
     protected void activateButtons() {
-        playAgainButton.setVisibility(View.VISIBLE);
+        playAgainButton.setText("PLAY AGAIN");
+        playAgainButton.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), GameActivity.class);
+            intent.putExtra("playerBlackName", playerBlackName);
+            intent.putExtra("playerWhiteName", playerWhiteName);
+            intent.putExtra("isBoardSize15", imageViewsArray.length == 15);
+            startActivity(intent);
+        });
         scoresButton.setText("SCORES");
         scoresButton.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), ScoresActivity.class);

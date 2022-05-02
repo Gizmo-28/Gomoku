@@ -3528,9 +3528,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:backgroundTint="@color/mainButtonColor"
-            android:text="@string/playAgainButton"
+            android:text="@string/reverseButton"
             android:textColor="@color/black"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:cornerRadius="20dp"
             tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
@@ -3568,7 +3568,7 @@
             android:backgroundTint="@color/mainButtonColor"
             android:text="@string/analyzeButton"
             android:textColor="@color/black"
-            android:visibility="invisible"
+            android:visibility="gone"
             app:cornerRadius="20dp"
             tools:ignore="TextContrastCheck" />
     </LinearLayout>

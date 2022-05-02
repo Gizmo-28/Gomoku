@@ -12,6 +12,7 @@
     <string name="analyzeButton">Analyze</string>
     <string name="scoresButton">Scores</string>
     <string name="drawButton">Draw</string>
+    <string name="reverseButton">Reverse</string>
     <string name="highScores">High scores</string>
     <string name="dbCleanButton">Clean Scores</string>
     <string name="button15">15x15</string>
