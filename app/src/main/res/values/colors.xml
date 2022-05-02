@@ -9,5 +9,6 @@
     <color name="whitePlayerTextColor">@color/white</color>
     <color name="dark">#4E4D44</color>
     <color name="darker">#45443E</color>
+    <color name="transparent">#00000000</color>
 
 </resources>

@@ -16,15 +16,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 
 public class GameActivity extends AppCompatActivity {
 
     private int[][] imageViewsIds;
 
     private TextView gameInfo;
+    private GameInfoManipulator gameInfoManipulator;
 
     private ImageView[][] imageViewsArray;
     private int[][] gameGrid;
+
+    private ArrayList<MyPair> stonesInOrderList = new ArrayList<>();
 
     private final int STANDARD_TIME = 1 * 60 * 1000;
     private final int TIME_WITH_BONUS = 1 * 60 * 1000;
@@ -60,6 +66,7 @@ public class GameActivity extends AppCompatActivity {
     private Button playAgainButton;
     private Button scoresButton;
     private Button exitButton;
+    private Button analyzeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,9 +113,9 @@ public class GameActivity extends AppCompatActivity {
             startWhiteTimerValue += BONUS_TIME;
         }
 
-        gameInfo = (TextView) findViewById(R.id.gameInfo);
-        setGameInfoToName(playerBlackName);
-        setGameInfoToBlack();
+        gameInfoManipulator = new GameInfoManipulator((TextView) findViewById(R.id.gameInfo));
+        gameInfoManipulator.setGameInfoToName(playerBlackName);
+        gameInfoManipulator.setGameInfoToBlack();
 
         for(int i=0; i<imageViewsIds.length; i++) {
             for(int j=0; j<imageViewsIds[0].length; j++) {
@@ -139,9 +146,10 @@ public class GameActivity extends AppCompatActivity {
                             view.setAlpha(1.0F);
                             counterBlackTurns++;
                             isBlackTurn = false;
-                            setGameInfoToName(playerWhiteName);
-                            setGameInfoToWhite();
+                            gameInfoManipulator.setGameInfoToName(playerWhiteName);
+                            gameInfoManipulator.setGameInfoToWhite();
                             gameGrid[row][column] = BLACK;
+                            stonesInOrderList.add(new MyPair(row, column));
 //                            Log.d("position", row+ " ," + column);
                             if(checkWinningPosition(BLACK)) {
                                 whiteTimer.cancel();
@@ -149,8 +157,8 @@ public class GameActivity extends AppCompatActivity {
                                 winner = BLACK;
                                 setImageViewsArrayNonClickable();
                                 colorWinningStones();
-                                setGameInfoToWon(playerBlackName);
-                                setGameInfoToBlack();
+                                gameInfoManipulator.setGameInfoToWon(playerBlackName);
+                                gameInfoManipulator.setGameInfoToBlack();
                                 activateButtons();
                                 addScoresToDbIfWon(playerBlackName, playerWhiteName, counterBlackTurns);
                             }
@@ -176,9 +184,10 @@ public class GameActivity extends AppCompatActivity {
                             view.setAlpha(1.0F);
                             counterWhiteTurns++;
                             isBlackTurn = true;
-                            setGameInfoToName(playerBlackName);
-                            setGameInfoToBlack();
+                            gameInfoManipulator.setGameInfoToName(playerBlackName);
+                            gameInfoManipulator.setGameInfoToBlack();
                             gameGrid[row][column] = WHITE;
+                            stonesInOrderList.add(new MyPair(row, column));
 //                            Log.d("position", row+ "," + column);
                             if(checkWinningPosition(WHITE)) {
                                 whiteTimer.cancel();
@@ -186,8 +195,8 @@ public class GameActivity extends AppCompatActivity {
                                 winner = WHITE;
                                 setImageViewsArrayNonClickable();
                                 colorWinningStones();
-                                setGameInfoToWon(playerWhiteName);
-                                setGameInfoToWhite();
+                                gameInfoManipulator.setGameInfoToWon(playerWhiteName);
+                                gameInfoManipulator.setGameInfoToWhite();
                                 activateButtons();
                                 addScoresToDbIfWon(playerWhiteName, playerBlackName, counterWhiteTurns);
                             }
@@ -201,6 +210,7 @@ public class GameActivity extends AppCompatActivity {
         playAgainButton = (Button) findViewById(R.id.playAgainButton);
         scoresButton = (Button) findViewById(R.id.scoresButton);
         exitButton = (Button) findViewById(R.id.exitButton);
+        analyzeButton = (Button) findViewById(R.id.analyzeButton);
 
         playAgainButton.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), GameActivity.class);
@@ -222,7 +232,7 @@ public class GameActivity extends AppCompatActivity {
                     whiteTimer.cancel();
                     blackTimer.cancel();
                     setImageViewsArrayNonClickable();
-                    setGameInfoToDraw();
+                    gameInfoManipulator.setGameInfoToDraw();
                     activateButtons();
                     int movesNum = counterBlackTurns > counterWhiteTurns ? counterBlackTurns : counterWhiteTurns;
                     addScoresToDbIfDrawn(playerWhiteName, playerBlackName, movesNum);
@@ -245,6 +255,17 @@ public class GameActivity extends AppCompatActivity {
 
         exitButton.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), MainActivity.class);
+            startActivity(intent);
+        });
+
+        analyzeButton.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), AnalyzeActivity.class);
+            intent.putExtra("playerBlackName", playerBlackName);
+            intent.putExtra("playerWhiteName", playerWhiteName);
+            intent.putExtra("isBoardSize15", bundle.getBoolean("isBoardSize15"));
+            intent.putExtra("stonesInOrderList", stonesInOrderList);
+            ArrayList<MyPair> temp = new ArrayList<>(Arrays.asList(winningStones));
+            intent.putExtra("winningStones", temp);
             startActivity(intent);
         });
     }
@@ -377,29 +398,6 @@ public class GameActivity extends AppCompatActivity {
 //                winningStones[4].getRow() +":" + winningStones[4].getColumn() + ", ");
     }
 
-    protected void setGameInfoToName(String name) {
-        String msg = name + "'s turn";
-        gameInfo.setText(msg);
-    }
-
-    protected void setGameInfoToWon(String name) {
-        String msg = name + " has won!";
-        gameInfo.setText(msg);
-    }
-
-    protected void setGameInfoToDraw() {
-        String msg = "Game drawn!";
-        gameInfo.setText(msg);
-    }
-
-    protected void setGameInfoToBlack() {
-        gameInfo.setTextColor(getResources().getColor(R.color.blackPlayerTextColor));
-    }
-
-    protected void setGameInfoToWhite() {
-        gameInfo.setTextColor(getResources().getColor(R.color.whitePlayerTextColor));
-    }
-
     protected void activateButtons() {
         playAgainButton.setVisibility(View.VISIBLE);
         scoresButton.setText("SCORES");
@@ -407,7 +405,7 @@ public class GameActivity extends AppCompatActivity {
             Intent intent = new Intent(view.getContext(), ScoresActivity.class);
             startActivity(intent);
         });
-        exitButton.setVisibility(View.VISIBLE);
+        analyzeButton.setVisibility(View.VISIBLE);
     }
 
     protected void addScoresToDbIfWon(String winner, String looser, int counterTurns) {
@@ -501,8 +499,8 @@ public class GameActivity extends AppCompatActivity {
             if (whiteTimerActive) {
                 winner = BLACK;
                 setImageViewsArrayNonClickable();
-                setGameInfoToWon(playerBlackName);
-                setGameInfoToBlack();
+                gameInfoManipulator.setGameInfoToWon(playerBlackName);
+                gameInfoManipulator.setGameInfoToBlack();
                 activateButtons();
                 addScoresToDbIfWon(playerBlackName, playerWhiteName, counterBlackTurns);
             }
@@ -510,8 +508,8 @@ public class GameActivity extends AppCompatActivity {
             if(blackTimerActive) {
                 winner = WHITE;
                 setImageViewsArrayNonClickable();
-                setGameInfoToWon(playerWhiteName);
-                setGameInfoToWhite();
+                gameInfoManipulator.setGameInfoToWon(playerWhiteName);
+                gameInfoManipulator.setGameInfoToWhite();
                 activateButtons();
                 addScoresToDbIfWon(playerWhiteName, playerBlackName, counterWhiteTurns);
             }

@@ -9,6 +9,7 @@
     <string name="submitButton">Submit</string>
     <string name="playAgainButton">Play Again</string>
     <string name="exitButton">Exit</string>
+    <string name="analyzeButton">Analyze</string>
     <string name="scoresButton">Scores</string>
     <string name="drawButton">Draw</string>
     <string name="highScores">High scores</string>
@@ -17,5 +18,9 @@
     <string name="button19">19x19</string>
     <string name="buttonStandardTime">1min</string>
     <string name="buttonTimeWithBonus">1min|5s</string>
+    <string name="buttonStart">Start</string>
+    <string name="buttonPrevious">Prev</string>
+    <string name="buttonNext">Next</string>
+    <string name="buttonEnd">End</string>
 
 </resources>

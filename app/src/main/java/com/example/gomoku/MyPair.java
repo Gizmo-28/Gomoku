@@ -1,6 +1,8 @@
 package com.example.gomoku;
 
-public class MyPair {
+import java.io.Serializable;
+
+public class MyPair implements Serializable {
     private int row;
     private int column;
 
