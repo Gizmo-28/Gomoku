@@ -19,9 +19,10 @@
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_game_15.xml" value="0.55625" />
         <entry key="app/src/main/res/layout/activity_game_19.xml" value="0.55625" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2897125244140627" />
         <entry key="app/src/main/res/layout/activity_player_setup.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_scores.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/authentication.xml" value="0.37130737304687506" />
       </map>
     </option>
   </component>

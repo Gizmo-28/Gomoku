@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background_color">#474745</color>
-    <color name="mainButtonColor">#918E79</color>
+    <color name="buttonColor">#918E79</color>
     <color name="textColor">#C5C4BE</color>
     <color name="blackPlayerTextColor">@color/black</color>
     <color name="whitePlayerTextColor">@color/textColor</color>

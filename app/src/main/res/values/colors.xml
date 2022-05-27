@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="background_color">#C5C4BE</color>
-    <color name="mainButtonColor">#918E79</color>
-    <color name="textColor">#FF000000</color>
+    <color name="black">#FF000000</color>
     <color name="blackPlayerTextColor">@color/black</color>
-    <color name="whitePlayerTextColor">@color/white</color>
     <color name="dark">#4E4D44</color>
     <color name="darker">#45443E</color>
+    <color name="buttonColor">#918E79</color>
+    <color name="lighterbuttonColor">#B3B1A5</color>
+    <color name="textColor">#FF000000</color>
     <color name="transparent">#00000000</color>
-
+    <color name="white">#FFFFFFFF</color>
+    <color name="whitePlayerTextColor">@color/white</color>
 </resources>
