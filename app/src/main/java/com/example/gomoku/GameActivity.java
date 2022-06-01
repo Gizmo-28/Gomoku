@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -70,11 +72,15 @@ public class GameActivity extends AppCompatActivity {
     private Button exitButton;
     private Button analyzeButton;
 
+    private FirebaseFirestore db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+
+        db = FirebaseFirestore.getInstance();
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null) {
